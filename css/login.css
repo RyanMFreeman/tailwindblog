@@ -1,0 +1,184 @@
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+    max-width: 50%;
+    margin: auto;
+    border-radius: 20px;
+    background-color: rgba(87, 70, 84, 0.295);
+    padding: 26px;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.295);
+}
+
+#username, #password, #email,
+#regUsername, #regPassword, #regEmail{
+    border-radius: 10px;
+    padding: 10px;
+    display: block;
+    margin: 10px;
+    background-color: rgba(248, 248, 248, 0.767);
+    outline: none;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.671);
+}
+
+#login, #register {
+    border-radius: 10px;
+    padding: 10px;
+    display: inline-flex;
+    margin: 20px auto;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    background: rgba(99, 101, 107, 0.63);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.295);
+    justify-content: center;
+    width: 100%; 
+    max-width: 260px;
+}
+
+#login, #register, #email, #username, #password,
+#regUsername, #regPassword, #regEmail {
+    color: #fffdfdd2;
+    border: none;
+    font-family: 'Inter', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+#content {
+    padding-top: 200px;
+    padding-right: 700px;
+}
+
+#username:hover, #password:hover, #login:hover, #register:hover, #email:hover,
+#regUsername:hover, #regPassword:hover, #regEmail:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+#username:focus, #password:focus, #email:focus, #regUsername:focus, #regPassword:focus, #regEmail:focus {
+    transform: scale(1.1);
+    transition: 0.5s;
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.3), 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+#login:active, #register:active {
+    transform: scale(0.98);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    color: #ff0000;
+    z-index: 1000;
+    font-size: 2rem;
+}
+
+
+/* General styles for screens smaller than 1024px */
+@media (max-width: 1024px) {
+
+    /* Full width for the login container on smaller screens */
+    .login {
+        max-width: 45%; 
+        height: auto; 
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    /* Centering and resizing input fields */
+    #username, #password, #email,
+    #regUsername, #regPassword, #regEmail {
+        width: 100%; 
+        max-width: 150px; 
+        margin: 8px auto; 
+        padding: 8px; 
+        font-size: 0.92rem; 
+    }
+
+    /* Adjusting login and register buttons */
+    #login, #register {
+        max-width: 300px; 
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    /* Header adjustments */
+    .header {
+        padding: 10px 0;
+        font-size: 1.5rem;
+    }
+
+    
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    /* Content padding for smaller screens */
+    #content {
+        padding: 100px 10px 0; 
+    }
+
+    /* Footer styling */
+    footer {
+        font-size: 1.5rem;
+        padding: 8px;
+    }
+
+    /* Hide additional effects for mobile devices */
+    .gradient, .cursor {
+        display: none; 
+    }
+}
+
+/* Additional smaller screen adjustments for screens 768px and below */
+@media (max-width: 768px) {
+
+    /* Login container adjustments */
+    .login {
+        max-width: 200px; 
+        padding: 15px;
+        margin: 0 auto;
+        box-shadow: none; 
+    }
+
+    /* Input fields full width */
+    #username, #password, #email,
+    #regUsername, #regPassword, #regEmail {
+        max-width: 80%;
+        font-size: 0.7rem; 
+    }
+
+    /* Login and register buttons with full width */
+    #login, #register {
+        max-width: 100%; 
+        padding: 10px;
+    }
+
+    /* Smaller header and title adjustments */
+    .header {
+        font-size: 1.2rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    /* Footer styling gotta make sure people don't dox themselves man */
+    footer {
+        font-size: 1.2rem;
+    }
+}

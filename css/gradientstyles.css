@@ -1,0 +1,30 @@
+body {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: .05em;
+}
+
+/* Gradient Effect */
+.gradient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    transition: background 0.5s ease;
+    z-index: -1;
+}
+
+/* Cursor Effect */
+.cursor {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(12, 159, 204, 0.034); 
+    pointer-events: none; /* Prevent interactions */
+    z-index: -1; /* Above the gradient */
+    transform: translate(-50%, -50%); 
+    transition: box-shadow 0.5s ease;
+    box-shadow: 0 0 200px rgb(54, 198, 255);
+}
