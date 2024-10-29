@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind Blog Demo</title>
+  <link rel="stylesheet" href="../css/tailstyles.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-slate-900 p-6">
+    <header>
+        <nav class="flex flex-col sm:flex-row fixed top-5 left-1/2 transform -translate-x-1/2 bg-slate-700 w-full max-w-[974px] h-auto p-4 items-center justify-around shadow-lg z-50 rounded-lg text-slate-100">
+            <a href="#TailwindDemo" class="flex rounded-2xl items-center justify-center bg-[#65558F] w-[110px] h-[40px] whitespace-nowrap drop-shadow-lg transition-all ease-in-out delay-75 hover:scale-110 mb-2 sm:mb-0">TW Demo</a>
+            <a href="../index.html" class="flex rounded-2xl items-center justify-center bg-[#65558F] w-[110px] h-[40px] whitespace-nowrap drop-shadow-lg transition-all ease-in-out delay-75 hover:scale-110 mb-2 sm:mb-0">Home</a>
+            <a href="create-post.html" class="flex rounded-2xl items-center justify-center bg-[#65558F] w-[110px] h-[40px] whitespace-nowrap drop-shadow-lg transition-all ease-in-out delay-75 hover:scale-110 mb-2 sm:mb-0">Post</a>
+        </nav>
+    </header>
+
+    <main class="flex justify-center items-center min-h-screen mt-80">
+        <div id="postsContainer" class="grid grid-cols-1 md:grid-cols-3 gap-24 w-full max-w-7xl"></div>
+      </main>
+
+  <script src="../js/blog.js"></script>
+</body>
+</html>

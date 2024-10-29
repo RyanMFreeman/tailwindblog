@@ -1,0 +1,35 @@
+<!-- pages/create-post.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Blog Post</title>
+  <link rel="stylesheet" href="../css/tailstyles.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-slate-900 p-6 justify-center flex items-center min-h-screen">
+    <header>
+        <nav class="flex flex-col sm:flex-row fixed top-5 left-1/2 transform -translate-x-1/2 bg-slate-700 w-full max-w-[974px] h-auto p-4 items-center justify-around shadow-lg z-50 rounded-lg text-slate-100">
+            <a href="#TailwindDemo" class="flex rounded-2xl items-center justify-center bg-[#65558F] w-[110px] h-[40px] whitespace-nowrap drop-shadow-lg transition-all ease-in-out delay-75 hover:scale-110 mb-2 sm:mb-0">TW Demo</a>
+            <a href="../index.html" class="flex rounded-2xl items-center justify-center bg-[#65558F] w-[110px] h-[40px] whitespace-nowrap drop-shadow-lg transition-all ease-in-out delay-75 hover:scale-110 mb-2 sm:mb-0">Home</a>
+            <a href="posts.html" class="flex rounded-2xl items-center justify-center bg-[#65558F] w-[110px] h-[40px] whitespace-nowrap drop-shadow-lg transition-all ease-in-out delay-75 hover:scale-110 mb-2 sm:mb-0">Blogs</a>
+        </nav>
+    </header>
+
+  <form id="postForm" class="bg-slate-700 mt-28 p-6 rounded-lg drop-shadow-lg w-[700px] right-2">
+    <label class="block text-slate-100 font-bold mb-6" for="title">New blog post</label>
+    <label class="block text-slate-300 font-semibold mb-2" for="title">Title</label>
+    <input id="title" type="text" class="border rounded-md w-full p-2 mb-4 bg-slate-200" required>
+
+    <label class="block text-slate-300 font-semibold mb-2" for="content">Content</label>
+    <textarea id="content" rows="6" class="border rounded-md w-full p-2 mb-4 bg-slate-200" required></textarea>
+
+    <button type="submit" class="bg-[#65558F] text-white px-4 py-2 rounded-md hover:bg-slate-500">
+      Submit Post
+    </button>
+  </form>
+
+  <script src="../js/blog.js"></script>
+</body>
+</html>
