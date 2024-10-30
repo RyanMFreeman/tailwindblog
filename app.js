@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
+require('dotenv').config({ path: './mongo.env'});
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -19,10 +20,7 @@ app.use(express.static(path.join(__dirname, 'src')) );
 
 
 // MongoDB Atlas connection
-mongoose.connect('mongodb+srv://ryanmfreeman:zKIU7q4zcdlkbxpS@forumcluster.h63xq.mongodb.net/?retryWrites=true&w=majority&appName=forumCluster', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+mongoose.connect(process.env.MONGODB_URI)
   .then(() => console.log('Connected to MongoDB Atlas'))
   .catch((err) => console.error('MongoDB connection error:', err));
 
