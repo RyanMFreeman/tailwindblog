@@ -7,7 +7,7 @@ document.getElementById('postForm')?.addEventListener('submit', async (event) =>
     const content = document.getElementById('content').value;
   
     try {
-      const response = await fetch('http://localhost:3000/api/posts', {
+      const response = await fetch('https://tailblogtest-b7c37ddcb6a2.herokuapp.com/api/posts', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -29,7 +29,7 @@ document.getElementById('postForm')?.addEventListener('submit', async (event) =>
   // Function to fetch and display blog posts
   async function fetchPosts() {
     try {
-      const response = await fetch('http://localhost:3000/api/posts');
+      const response = await fetch('https://tailblogtest-b7c37ddcb6a2.herokuapp.com/api/posts');
       const posts = await response.json();
       const postsContainer = document.getElementById('postsContainer');
       postsContainer.innerHTML = posts.map(post => `
